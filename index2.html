@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cinephiles</title>
+	<link rel="icon" type="image/ico" href="logo.png" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.scroller{
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+		}
+		.mem{
+			flex: 0 0 auto;
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		.memoverlay{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			background-color: rgba(0,0,0,0);
+			width: 100%;
+			height: 100%;
+			transition: 0.5s ease;
+			border-radius: 50%;
+		}
+		.titoverlay{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			background-color: rgba(0,0,0,0);
+			width: 100%;
+			height: 100%;
+			transition: 0.5s ease;
+		}
+		.memimg{
+			position: relative;
+		}
+		.memimg:hover .memoverlay{
+			background-color: rgba(0,0,0,0.7);
+		}
+		.memimg:hover .memname{
+			opacity: 1;
+			font-size: 20px;
+		}
+		.memimg:hover .titoverlay{
+			background-color: rgba(0,0,0,0.7);
+		}
+		.memname{
+			color: white;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			opacity: 0;
+			transition: 0.5s ease;
+			font-size: 15px;
+		}
+		.titname{
+			color: white;
+			top: 40%;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			opacity: 0;
+			transition: 0.5s ease;
+			font-size: 15px;
+		}
+		.memimg:hover .titname{
+			opacity: 1;
+			font-size: 15px;
+		}
+
+	</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 0.9">
+		<div class="container-fluid">
+			<a href="#" class="navbar-brand"><img src="logoBW.png" style="width: 23px;">
+			</a>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">THE CINEPHILES</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#about">Home</a></li>
+					<li><a href="#filmography">Short Films</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#members">Members</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>	
+			</div>
+		</div>
+	</nav>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!--Indicators-->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<!--Wrapper for slides-->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="carousel\shooting.jpg" alt="Shooting">
+				<div class="carousel-caption">
+					<h1>The Cinephiles</h1>
+				</div>
+			</div>
+			<div class="item">
+				<img src="carousel\vartikaa.jpg" alt="Shooting">
+			</div>
+			<div class="item">
+				<img src="carousel\agony.jpg" alt="Shooting">
+			</div>
+		</div>
+		<!--Left and Right controls-->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>	
+
+	<div class="container text-center" style="padding: 80px 120px;" id="about">
+		<img class="img-responsive" src="logo.png" style="width: 100px; margin-left: auto; margin-right: auto;">
+		<h3>THE CINEPHILES</h3>
+		<p><em>the movie making club of IIT Indore</em></p>
+		<p>We, at The Cinephiles, make short films and work on various other video related projects. All of us are ultimate movie freaks with passion towards various fields of movie making. Here, we enjoy the art of film making along with mastering the pillars of film making which includes direction, editing, script writing, sound mixing among others. Being a club of IIT Indore, we also aim to take the institute to new heights by showing our best ability in competitions like IITvsIIM and Inter-IIT and many others.
+	</div>
+
+	<div class="container-fluid" style="background-color: #2c2c2c; color: white; padding: 50px;" id="filmography">
+		<div class="text-center"><h3>Our Filmography<br></h3></div>
+		<div class="row">
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg">
+				<img class="img-responsive" src="titles\Glimpses.jpg">
+				</a>
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>GLIMPSE OF 2017</p>
+					<p>Release date: 26 June, 2018</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=8-PiTPPOPPs">Watch Here</a></strong></p>
+				</div></div></div></div>
+			</div>
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg">
+				<img class="img-responsive" src="titles\ppk.jpg">
+				</a>
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>PARCEL PYAAR KA</p>
+					<p>Release date: 1 April, 2018</p>
+					<p>Director: Devashish Shukla</p>
+					<p>Cast: Vartika Pathak, Keshav Bhala</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=4sabVVjjgfg&t=2s">Watch Here</a></strong></p>
+				</div></div></div></div>
+			</div>
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg"><img class="img-responsive" src="titles\toa.jpg"></a>
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>THE ONEIRIC AGONY</p>
+					<p>Release date: 2 January, 2018</p>
+					<p>Director: Devashish Shukla</p>
+					<p>Cast: Keshav Bhala, Stuti Dubey</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=jOtCOXz6Tuc&t=362s">Watch Here</a></strong>
+					</p>
+				</div></div></div></div>
+			</div>
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg"><img class="img-responsive" src="titles\dereliction.jpg">
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>DERELICTION</p>
+					<p>Release date: 2 January, 2018</p>
+					<p>Director: Devashish Shukla</p>
+					<p>Cast: Keshav Bhala, Sumit Kumar Singh</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=mQ7VOu2VjxM&t=26s">Watch Here</a></strong>
+					</p>
+				</div></div></div></div>
+			</div>
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg"><img class="img-responsive" src="titles\suicide.jpg">
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>SUCIDE</p>
+					<p>Release date: 12 September, 2017</p>
+					<p>Director: Aniket Tiwari, Sandarbh Sahu, Devashish Shukla</p>
+					<p>Cast: Pratik Jain</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=0W1TEbknyAQ&t=11s">Watch Here</a></strong>
+					</p>
+				</div></div></div></div>
+			</div>
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg"><img class="img-responsive" src="titles\fresher.jpg"></a>
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>FRESHER'S INTRO 2017</p>
+					<p>Release date: 22 September, 2017</p>
+					<p>Cast: IIT Indore batch of 2021</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=yQPpjCTHLSU&t=45s">Watch Here</a></strong>
+					</p>
+				</div></div></div></div>
+			</div>
+			<div style="padding: 20px" class="col-md-3 col-xs-6">
+				<div class="memimg"><img class="img-responsive" src="titles\intro17.jpg"></a>
+				<div>
+					<div class="titoverlay"><div class="titname">
+					<p style="font-size : 25px";>CINEPHILES INTRO 2017</p>
+					<p>Release date: 12 September, 2017</p>
+					<p style="color: green;"><strong><a href="https://www.youtube.com/watch?v=wq04Xlxt5tU">Watch Here</a></strong>
+					</p>
+				</div></div></div></div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="members">
+		<div class="text-center"><h3>Club Members<br></h3></div>
+		<div class="scroller row">
+			<div class="mem col-xs-3 col-md-2"><div class="memimg"><img class="img-responsive" src="members/devashish.jpg" style="border-radius: 50%;">
+				<div class="memoverlay"><div class="memname">Devashish Shukla</div></div></div>
+			</div>
+			<div class="mem col-xs-3 col-md-2"><div class="memimg"><img class="img-responsive" src="members/sandarbh.jpg" style="border-radius: 50%;">
+				<div class="memoverlay"><div class="memname">Sandarbh Sahu</div></div></div></div>
+			<div class="mem col-xs-3 col-md-2"><div class="memimg"><img class="img-responsive" src="members/ashwini.jpg" style="border-radius: 50%;">
+				<div class="memoverlay"><div class="memname">Ashwini<br>Jha</div></div></div></div>
+			<div class="mem col-xs-3 col-md-2"><div class="memimg"><img class="img-responsive" src="members/adityagupta.jpg" style="border-radius: 50%;">
+				<div class="memoverlay"><div class="memname">Aditya Gupta</div></div></div></div>
+			<div class="mem col-xs-3 col-md-2"><div class="memimg"><img class="img-responsive" src="members/prayag.jpg" style="border-radius: 50%;">
+				<div class="memoverlay"><div class="memname">Prayag<br>Jain</div></div></div></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/aneesh.jpg" style="border-radius: 50%;"></div>
+		</div>
+		<div id="viewAll" class="collapse"><div class="scroller row">
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/devashish.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/sandarbh.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/ashwini.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/adityagupta.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/prayag.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/aneesh.jpg" style="border-radius: 50%;"></div>		
+		</div>
+		<div class="scroller row">
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/devashish.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/sandarbh.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/ashwini.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/adityagupta.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/prayag.jpg" style="border-radius: 50%;"></div>
+			<div class="mem col-xs-3 col-md-2"><img class="img-responsive" src="members/aneesh.jpg" style="border-radius: 50%;"></div>		
+		</div>
+		</div>
+		<div class="text-center"><a href="#viewAll" data-toggle="collapse"><img src="arrowdown.png" style="height: 50px;" onmousedown="change(this)"></a></div>
+		
+	</div>	
+
+	<div class="container-fluid" id="contact" style="background-color: #2c2c2c; color: white; padding-top: 50px; padding-bottom: 20px;">
+		<div class="text-center"><h3>Contact Us<br></h3></div>
+		<div class="row">
+			<div class="col-md-4 col-xs-12 text-center" style="padding-top: 30px;">
+			<img src="socialpng/gmail.png" onmouseover="GonHvr(this)" onmouseout="Gnormal(this)"><h5>Mail us at: cinephiles@iiti.ac.in</h5></div>
+			<div class="col-md-4 col-xs-12 text-center" style="padding-top: 30px;">
+			<a href="https://www.instagram.com/cinephiles_iiti/"><img src="socialpng/insta.png" onmouseover="IonHvr(this)" onmouseout="Inormal(this)"></a>
+			<a href="https://www.facebook.com/tcpmov/"><img src="socialpng/fb.png" onmouseover="FonHvr(this)" onmouseout="Fnormal(this)"></a><h5>Like and Follow us on social network</h5></div>
+			<div class="col-md-4 col-xs-12 text-center" style="padding-top: 30px;">
+				<a href="https://www.youtube.com/channel/UC3fFZVT9E3Rlovhd5ms-wPA"><img src="socialpng/youtube.png" onmouseover="YonHvr(this)" onmouseout="Ynormal(this)"></a><h5>Subscribe our youtube channel</h5>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+<script>
+	count=1;
+function change(x)
+{
+	count++;
+	if(count%2==0)
+	{
+		x.src="arrowup.png";
+	}
+	if(count%2!=0)
+	{
+		x.src="arrowdown.png";
+	}
+}
+function YonHvr(x)
+{
+	x.src="socialpng/youtubecolor.png";
+}
+function Ynormal(x)
+{
+	x.src="socialpng/youtube.png";
+}
+function GonHvr(x)
+{
+	x.src="socialpng/gmailcolor.png";
+}
+function Gnormal(x)
+{
+	x.src="socialpng/gmail.png";
+}
+function IonHvr(x)
+{
+	x.src="socialpng/instacolor.png";
+}
+function Inormal(x)
+{
+	x.src="socialpng/insta.png";
+}
+function FonHvr(x)
+{
+	x.src="socialpng/fbcolor.png";
+}
+function Fnormal(x)
+{
+	x.src="socialpng/fb.png"
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
